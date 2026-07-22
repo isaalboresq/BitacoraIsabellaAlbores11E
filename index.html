@@ -59,6 +59,8 @@
             border-left: 8px solid #a855f7;
             box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-sizing: border-box;
+            overflow: hidden; /* Mantiene todo el contenido dentro de la tarjeta */
         }
 
         .semana:hover {
@@ -71,11 +73,23 @@
             color: #7e22ce;
         }
 
-        .pdf-container {
+        /* Corrección de dimensiones para videos, imágenes y PDFs */
+        .pdf-container, .media-container {
             margin-top: 15px;
             border-radius: 10px;
             overflow: hidden;
             border: 1px solid #ddd;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .media-container img, .media-container video {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+            box-sizing: border-box;
         }
 
         footer {
@@ -109,18 +123,19 @@
     </header>
 
     <main>
+        <!-- Semana 1 -->
         <div class="semana">
-            <h3>Introducción Arduino</h3>
+            <h3>Semana 1: Introducción Arduino</h3>
             <p>
-                Análisis de la plataforma <b>Arduino</b> , componentes electrónicos como el microcontrolador y tipos de señales digitales y análogas.
+                Análisis de la plataforma <b>Arduino</b>, componentes electrónicos como el microcontrolador y tipos de señales digitales y análogas.
             </p>
-            
             <div class="pdf-container">
                 <embed src="Recursos/Introducción Arduino.pdf.pdf" type="application/pdf" width="100%" height="350px" />
             </div>
         </div>
 
-    <div class="semana">
+        <!-- Semana 2 -->
+        <div class="semana">
             <h3>Semana 2</h3>
             <p>Introducción a Arduino en la plataforma Tinkercad.</p>
             <div class="media-container">
@@ -134,10 +149,10 @@
         <!-- Semana 3 -->
         <div class="semana">
             <h3>Semana 3</h3>
-            <p>Realizamos en físico el circuito de la Semana 2</p>
+            <p>Realizamos en físico el circuito de la Semana 2.</p>
             <div class="media-container">
                 <video controls>
-                    <source src="Recursos/Semana3.mp4" type="video/mp4">
+                    <source src="Recursos/semana3.mp4" type="video/mp4">
                     Tu navegador no soporta la reproducción de video.
                 </video>
             </div>
@@ -148,7 +163,7 @@
             <h3>Semana 4</h3>
             <p>Descripción de la actividad o circuito fotografiado en la semana 4.</p>
             <div class="media-container">
-                <img src="Recursos/semana 4.jpg" alt="Foto Semana 4">
+                <img src="semana 4.jpg" alt="Foto Semana 4">
             </div>
         </div>
 
@@ -158,7 +173,7 @@
             <p>Descripción de la práctica o proyecto presentado en la semana 5.</p>
             <div class="media-container">
                 <video controls>
-                    <source src="Recursos/Semana5.mp4" type="video/mp4">
+                    <source src="Recursos/semana5.mp4" type="video/mp4">
                     Tu navegador no soporta la reproducción de video.
                 </video>
             </div>
@@ -167,10 +182,11 @@
         <!-- Semana 6 -->
         <div class="semana">
             <h3>Semana 6</h3>
-            <p>Descripción del circuito con sensor ultrasónico e indicadores LED.</p>
+            <p>Simulación del circuito en Tinkercad con sensor de distancia ultrasónico e indicadores LED.</p>
             <div class="media-container">
                 <video controls>
-                    <source src="Recursos/Semana6.mp4" type="video/mp4">
+                    <!-- Ajusta el nombre exacto de tu archivo de grabación si difiere -->
+                    <source src="Grabación de pantalla 2026-07-20 172307.mp4" type="video/mp4">
                     Tu navegador no soporta la reproducción de video.
                 </video>
             </div>
@@ -179,10 +195,10 @@
         <!-- Semana 7 -->
         <div class="semana">
             <h3>Semana 7</h3>
-            <p>Descripción del avance o demostración final en la semana 7.</p>
+            <p>Demostración en video del circuito o avance de la semana 7.</p>
             <div class="media-container">
                 <video controls>
-                    <source src="Recursos/Semana7.mp4" type="video/mp4">
+                    <source src="Recursos/semana7.mp4" type="video/mp4">
                     Tu navegador no soporta la reproducción de video.
                 </video>
             </div>
